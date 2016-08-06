@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionTech.PriceCalculation", "DecisionTech.PriceCalculation\DecisionTech.PriceCalculation.csproj", "{9C0EC570-5AD4-454C-B4F6-BBA37588C373}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{DA4D8C87-C46D-41F6-83AA-C4DFED475F15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2DDC4528-E454-46B4-8E69-2D680F0FBDF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionTech.PriceCalculation.Specs", "DecisionTech.PriceCalculation.Specs\DecisionTech.PriceCalculation.Specs.csproj", "{E0F88363-1D49-4A83-8A1C-978B301556F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionTech.PriceCalculation.UnitTests", "DecisionTech.PriceCalculation.UnitTests\DecisionTech.PriceCalculation.UnitTests.csproj", "{B0E54393-1111-47CD-B282-0EF25A1C72EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionTech.PriceCalculation.Console", "DecisionTech.PriceCalculation.Console\DecisionTech.PriceCalculation.Console.csproj", "{E550F63D-2F7E-4D3B-8057-49504EFD01AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C0EC570-5AD4-454C-B4F6-BBA37588C373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0EC570-5AD4-454C-B4F6-BBA37588C373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0EC570-5AD4-454C-B4F6-BBA37588C373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0EC570-5AD4-454C-B4F6-BBA37588C373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F88363-1D49-4A83-8A1C-978B301556F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F88363-1D49-4A83-8A1C-978B301556F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F88363-1D49-4A83-8A1C-978B301556F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F88363-1D49-4A83-8A1C-978B301556F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E54393-1111-47CD-B282-0EF25A1C72EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E54393-1111-47CD-B282-0EF25A1C72EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E54393-1111-47CD-B282-0EF25A1C72EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E54393-1111-47CD-B282-0EF25A1C72EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E550F63D-2F7E-4D3B-8057-49504EFD01AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E550F63D-2F7E-4D3B-8057-49504EFD01AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E550F63D-2F7E-4D3B-8057-49504EFD01AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E550F63D-2F7E-4D3B-8057-49504EFD01AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9C0EC570-5AD4-454C-B4F6-BBA37588C373} = {DA4D8C87-C46D-41F6-83AA-C4DFED475F15}
+		{E0F88363-1D49-4A83-8A1C-978B301556F7} = {2DDC4528-E454-46B4-8E69-2D680F0FBDF6}
+		{B0E54393-1111-47CD-B282-0EF25A1C72EC} = {2DDC4528-E454-46B4-8E69-2D680F0FBDF6}
+		{E550F63D-2F7E-4D3B-8057-49504EFD01AB} = {DA4D8C87-C46D-41F6-83AA-C4DFED475F15}
+	EndGlobalSection
+EndGlobal
