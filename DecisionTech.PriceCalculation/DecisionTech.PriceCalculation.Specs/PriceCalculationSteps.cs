@@ -12,6 +12,7 @@
 	{
 		private Basket _basket;
 		private Receipt _receipt;
+		private static readonly DiscounterFactory _discounterFactory = new DiscounterFactory();
 
 		[Given("the basket has")]
 		public void GivenTheBasketHas(Table table)
@@ -20,7 +21,11 @@
 				.Rows
 				.Select(p => new Product {
 					Quantity = Convert.ToInt32(p["Quantity"]),
-					Name = p["Name"]
+					Name = p["Name"],
+					Price = new Price
+					{
+						Amount = Convert.ToDecimal(p["Price"])
+					}
 				});
 			_basket = new Basket
 			{
@@ -29,17 +34,17 @@
 		}
 
 		[When("I total the basket")]
-		public void WhenITotalTheBasket()
+		public async void WhenITotalTheBasket()
 		{
-			var calculator = new Calculator();
-			_receipt = calculator.Calculate(_basket);
+			var calculator = new Calculator(_discounterFactory);
+			_receipt = await calculator.Calculate(_basket);
 		}
 
 		[Then("the price should be (.*)")]
 		public void ThenTheResultShouldBe(string price)
 		{
 			var priceAsDecimal = Convert.ToDecimal(price.Substring(1));
-			Assert.Same(_receipt.Total, priceAsDecimal);
+			Assert.Equal(priceAsDecimal, _receipt.Total);
 		}
 	}
 }

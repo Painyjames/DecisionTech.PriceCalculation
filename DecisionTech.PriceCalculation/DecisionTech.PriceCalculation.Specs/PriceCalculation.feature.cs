@@ -83,16 +83,20 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Quantity",
-                        "Name"});
+                        "Name",
+                        "Price"});
             table1.AddRow(new string[] {
                         "1",
-                        "bread"});
+                        "bread",
+                        "1.00"});
             table1.AddRow(new string[] {
                         "1",
-                        "butter"});
+                        "butter",
+                        "0.80"});
             table1.AddRow(new string[] {
                         "1",
-                        "milk"});
+                        "milk",
+                        "1.15"});
 #line 7
  testRunner.Given("the basket has", ((string)(null)), table1, "Given ");
 #line 12
@@ -114,13 +118,16 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Quantity",
-                        "Name"});
+                        "Name",
+                        "Price"});
             table2.AddRow(new string[] {
                         "2",
-                        "butter"});
+                        "butter",
+                        "0.80"});
             table2.AddRow(new string[] {
                         "2",
-                        "bread"});
+                        "bread",
+                        "1.00"});
 #line 16
  testRunner.Given("the basket has", ((string)(null)), table2, "Given ");
 #line 20
@@ -142,10 +149,12 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Quantity",
-                        "Name"});
+                        "Name",
+                        "Price"});
             table3.AddRow(new string[] {
                         "4",
-                        "milk"});
+                        "milk",
+                        "1.15"});
 #line 24
  testRunner.Given("the basket has", ((string)(null)), table3, "Given ");
 #line 27
@@ -167,16 +176,20 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Quantity",
-                        "Name"});
+                        "Name",
+                        "Price"});
             table4.AddRow(new string[] {
                         "2",
-                        "butter"});
+                        "butter",
+                        "0.80"});
             table4.AddRow(new string[] {
                         "1",
-                        "bread"});
+                        "bread",
+                        "1.00"});
             table4.AddRow(new string[] {
                         "8",
-                        "milk"});
+                        "milk",
+                        "1.15"});
 #line 31
  testRunner.Given("the basket has", ((string)(null)), table4, "Given ");
 #line 36

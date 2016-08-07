@@ -46,7 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="Discounter.cs" />
+    <Compile Include="DiscounterFactory.cs" />
+    <Compile Include="DiscountType.cs" />
     <Compile Include="ICalculator.cs" />
+    <Compile Include="IDiscounter.cs" />
+    <Compile Include="IDiscounterFactory.cs" />
     <Compile Include="Models\Price.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Receipt.cs" />

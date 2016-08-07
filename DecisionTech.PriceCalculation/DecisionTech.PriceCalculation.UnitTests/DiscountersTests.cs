@@ -45,7 +45,7 @@
 
 			await discounter.ApplyDiscountAsync(receipt);
 
-			Assert.Same(receipt.Total, 2.20m);
+			Assert.Equal(receipt.Total, 2.10m);
 		}
 
 		[Fact]
@@ -53,8 +53,8 @@
 		{
 			var discounter = new Discounter
 			{
-				Product = "butter",
-				QuantityNeeded = 1,
+				Product = "milk",
+				QuantityNeeded = 4,
 				DiscountOn = "milk",
 				Discount = 100,
 				DiscountType = DiscountType.Percentage
@@ -74,7 +74,7 @@
 
 			await discounter.ApplyDiscountAsync(receipt);
 
-			Assert.Same(receipt.Total, 6.90m);
+			Assert.Equal(receipt.Total, 6.90m);
 		}
 	}
 }

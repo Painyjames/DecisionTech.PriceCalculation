@@ -1,9 +1,10 @@
 ﻿namespace DecisionTech.PriceCalculation
 {
+	using System.Threading.Tasks;
 	using Models;
 
 	public interface ICalculator
 	{
-		Receipt Calculate(Basket basket);
+		Task<Receipt> Calculate(Basket basket);
 	}
 }
