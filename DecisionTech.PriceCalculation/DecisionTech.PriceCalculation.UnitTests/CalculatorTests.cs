@@ -1,6 +1,7 @@
 ﻿namespace DecisionTech.PriceCalculation.UnitTests
 {
 	using System.Collections.Generic;
+	using Models;
 	using Xunit;
 
 	[Trait("Category", "UnitTests")]
@@ -16,9 +17,9 @@
 				new Product { Name = "bread", Quantity = 1 }
 			};
 
-			var receipt = calculator.Calculates();
+			var receipt = calculator.Calculate();
 
-			Assert.True(receipt.Total);
+			Assert.True(receipt.Total == 2.15m);
 		}
 	}
 }

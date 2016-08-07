@@ -79,6 +79,12 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DecisionTech.PriceCalculation\DecisionTech.PriceCalculation.csproj">
+      <Project>{9c0ec570-5ad4-454c-b4f6-bba37588c373}</Project>
+      <Name>DecisionTech.PriceCalculation</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

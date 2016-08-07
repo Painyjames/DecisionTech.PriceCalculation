@@ -68,6 +68,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DecisionTech.PriceCalculation\DecisionTech.PriceCalculation.csproj">
+      <Project>{9c0ec570-5ad4-454c-b4f6-bba37588c373}</Project>
+      <Name>DecisionTech.PriceCalculation</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
