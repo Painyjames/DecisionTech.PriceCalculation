@@ -13,8 +13,8 @@
 			var calculator = new Calculator();
 			var products = new List<Product>()
 			{
-				new Product { Name = "milk", Quantity = 1 },
-				new Product { Name = "bread", Quantity = 1 }
+				new Product { Name = "milk", Quantity = 1, Price = new Price { Amount = 1.15m } },
+				new Product { Name = "bread", Quantity = 1, Price = new Price { Amount = 1.00m } }
 			};
 			var basket = new Basket
 			{
