@@ -10,25 +10,29 @@
 	[Binding]
 	public sealed class PriceCalculationSteps
 	{
-		private IEnumerable<Product> _products;
+		private Basket _basket;
 		private Receipt _receipt;
 
 		[Given("the basket has")]
 		public void GivenTheBasketHas(Table table)
 		{
-			_products = table
+			var products = table
 				.Rows
 				.Select(p => new Product {
 					Quantity = Convert.ToInt32(p["Quantity"]),
 					Name = p["Name"]
 				});
+			_basket = new Basket
+			{
+				Products = products.ToList()
+			};
 		}
 
 		[When("I total the basket")]
 		public void WhenITotalTheBasket()
 		{
 			var calculator = new Calculator();
-			_receipt = calculator.Calculate();
+			_receipt = calculator.Calculate(_basket);
 		}
 
 		[Then("the price should be (.*)")]

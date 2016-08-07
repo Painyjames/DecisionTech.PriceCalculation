@@ -4,6 +4,6 @@
 
 	public interface ICalculator
 	{
-		Receipt Calculate();
+		Receipt Calculate(Basket basket);
 	}
 }

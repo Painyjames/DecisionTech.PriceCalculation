@@ -16,8 +16,12 @@
 				new Product { Name = "milk", Quantity = 1 },
 				new Product { Name = "bread", Quantity = 1 }
 			};
+			var basket = new Basket
+			{
+				Products = products
+			};
 
-			var receipt = calculator.Calculate();
+			var receipt = calculator.Calculate(basket);
 
 			Assert.True(receipt.Total == 2.15m);
 		}
