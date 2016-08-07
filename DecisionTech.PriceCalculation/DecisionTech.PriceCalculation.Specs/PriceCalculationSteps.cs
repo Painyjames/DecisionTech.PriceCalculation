@@ -1,7 +1,6 @@
 ﻿namespace DecisionTech.PriceCalculation.Specs
 {
 	using System;
-	using System.Collections.Generic;
 	using System.Linq;
 	using Models;
 	using TechTalk.SpecFlow;
@@ -10,9 +9,9 @@
 	[Binding]
 	public sealed class PriceCalculationSteps
 	{
-		private Basket _basket;
-		private Receipt _receipt;
 		private static readonly DiscounterFactory _discounterFactory = new DiscounterFactory();
+		private const string Basket = "Basket";
+		private const string Receipt = "Receipt";
 
 		[Given("the basket has")]
 		public void GivenTheBasketHas(Table table)
@@ -27,24 +26,30 @@
 						Amount = Convert.ToDecimal(p["Price"])
 					}
 				});
-			_basket = new Basket
+			var basket = new Basket
 			{
 				Products = products.ToList()
 			};
+			ScenarioContext.Current.Add(Basket, basket);
 		}
 
 		[When("I total the basket")]
-		public async void WhenITotalTheBasket()
+		public void WhenITotalTheBasket()
 		{
+			var basket = (Basket)ScenarioContext.Current[Basket];
 			var calculator = new Calculator(_discounterFactory);
-			_receipt = await calculator.Calculate(_basket);
+			var task = calculator.Calculate(basket);
+			task.Wait();
+			var receipt = task.Result;
+			ScenarioContext.Current.Add(Receipt, receipt);
 		}
 
 		[Then("the price should be (.*)")]
 		public void ThenTheResultShouldBe(string price)
 		{
+			var receipt = (Receipt)ScenarioContext.Current[Receipt];
 			var priceAsDecimal = Convert.ToDecimal(price.Substring(1));
-			Assert.Equal(priceAsDecimal, _receipt.Total);
+			Assert.Equal(priceAsDecimal, receipt.Total);
 		}
 	}
 }
